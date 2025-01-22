@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1388</width>
+    <height>852</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QGroupBox" name="dialogGroupBox">
+      <property name="title">
+       <string>Dialog</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>COM Port:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="portInput">
+            <property name="text">
+             <string>/dev/cu.usbmodem11201</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_32">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_21">
+          <item>
+           <widget class="QPushButton" name="connectButton">
+            <property name="text">
+             <string>Connect</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>100</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="disconnectButton">
+            <property name="text">
+             <string>Disconnect</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Command:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="commandInput"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="sendButton">
+            <property name="text">
+             <string>Send</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_3">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Readback:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="readbackBrowser"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_4">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="clearButton">
+            <property name="text">
+             <string>Clear</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>128</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="saveButton">
+            <property name="text">
+             <string>Save As...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="mainTabs">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="usesScrollButtons">
+       <bool>false</bool>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="Config">
+       <attribute name="title">
+        <string>Configuration</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_21">
+        <item>
+         <widget class="QGroupBox" name="tempsGroupBox">
+          <property name="title">
+           <string>Temperatures</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="T1GroupBox">
+             <property name="title">
+              <string>Trap 1</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QLabel" name="labelT1Temp">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_16">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                 <item>
+                  <widget class="QSpinBox" name="T1TempSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>75</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="minimum">
+                    <number>-215</number>
+                   </property>
+                   <property name="maximum">
+                    <number>165</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetT1TempButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="THFGroupBox">
+             <property name="title">
+              <string>Trap HF</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_20">
+              <item>
+               <widget class="QLabel" name="labelTHFTemp">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_20">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <item>
+                  <widget class="QSpinBox" name="THFTempSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>75</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="minimum">
+                    <number>-215</number>
+                   </property>
+                   <property name="maximum">
+                    <number>165</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetTHFTempButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="CryoCoolerGroupBox">
+             <property name="title">
+              <string>Cryo Cooler</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_24">
+              <item>
+               <widget class="QFrame" name="frame_11">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_24">
+                 <item>
+                  <widget class="QLabel" name="labelCryoCoolerTemp">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelCryoCoolerVacuum">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A mbar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_34">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                 <item>
+                  <widget class="QSpinBox" name="CryoCoolerTempSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>75</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="minimum">
+                    <number>-215</number>
+                   </property>
+                   <property name="maximum">
+                    <number>-180</number>
+                   </property>
+                   <property name="value">
+                    <number>-196</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetCryoCoolerTempButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="BoschOvenGroupBox">
+             <property name="title">
+              <string>Bosch oven</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_22">
+              <item>
+               <widget class="QLabel" name="labelBoschOvenTemp">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_22">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_16">
+                 <item>
+                  <widget class="QSpinBox" name="BoschOvenTempSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>75</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximum">
+                    <number>600</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetBoschOvenTempButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="CoF3OvenGroupBox">
+             <property name="title">
+              <string>CoF3 oven</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_23">
+              <item>
+               <widget class="QLabel" name="labelCoF3OvenTemp">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_24">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_17">
+                 <item>
+                  <widget class="QSpinBox" name="CoF3OvenTempSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>75</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximum">
+                    <number>600</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetCoF3OvenTempButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="T2GroupBox">
+             <property name="title">
+              <string>Trap 2</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_19">
+              <item>
+               <widget class="QLabel" name="labelT2Temp">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_18">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <widget class="QSpinBox" name="T2TempSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>75</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="minimum">
+                    <number>-215</number>
+                   </property>
+                   <property name="maximum">
+                    <number>165</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetT2TempButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="flowsGroupBox">
+          <property name="title">
+           <string>Flow rates</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QGroupBox" name="jacketH2OGroupBox">
+             <property name="title">
+              <string>H2O jacket</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_17">
+              <item>
+               <widget class="QFrame" name="frame_31">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_31">
+                 <item>
+                  <widget class="QLabel" name="labelH2OFlow">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A ccm&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelH2OTemp">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="h2ovalveCheckbox">
+                   <property name="text">
+                    <string>H2O jacket on</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="mfcCOGroupBox">
+             <property name="title">
+              <string>CO MFC</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_32">
+              <item>
+               <widget class="QFrame" name="frame_29">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_29">
+                 <item>
+                  <widget class="QLabel" name="labelCOFlow">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A ccm&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="covalveCheckbox">
+                   <property name="text">
+                    <string>CO flow on</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_30">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <item>
+                  <widget class="QDoubleSpinBox" name="COFlowSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>50</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <double>150.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetCOFlowButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="mfcH2GroupBox">
+             <property name="title">
+              <string>H2 MFC</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_28">
+              <item>
+               <widget class="QFrame" name="frame_27">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_27">
+                 <item>
+                  <widget class="QLabel" name="labelH2Flow">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A ccm&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="h2valveCheckbox">
+                   <property name="text">
+                    <string>H2 flow on</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_28">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <item>
+                  <widget class="QDoubleSpinBox" name="H2FlowSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>50</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <double>150.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetH2FlowButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="mfcHeGroupBox">
+             <property name="title">
+              <string>He MFC</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_26">
+              <item>
+               <widget class="QFrame" name="frame_25">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_25">
+                 <item>
+                  <widget class="QLabel" name="labelHeFlow">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A ccm&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="hevalveCheckbox">
+                   <property name="text">
+                    <string>He flow on</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_26">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_18">
+                 <item>
+                  <widget class="QDoubleSpinBox" name="HeFlowSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>50</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="decimals">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <double>150.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetHeFlowButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="valvesGroupBox">
+          <property name="title">
+           <string>Switching and selector valves</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <item>
+            <widget class="QGroupBox" name="SelectorValveGroupBox">
+             <property name="title">
+              <string>Main selector</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QFrame" name="frame_6">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <widget class="QLabel" name="labelSelectorValve">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="selectorCWCheckbox">
+                   <property name="text">
+                    <string>CW</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_5">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <item>
+                  <widget class="QSpinBox" name="SelectorValveSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>50</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>6</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetSelectorValveButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="HFValveGroupBox">
+             <property name="title">
+              <string>HF waste</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <widget class="QLabel" name="labelHFSwitchingValve">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_12">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                 <item>
+                  <widget class="QSpinBox" name="HFSwitchingValveSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>50</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>2</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetHFSwitchingValveButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="COValveGroupBox">
+             <property name="title">
+              <string>CO sample loop</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_15">
+              <item>
+               <widget class="QLabel" name="labelCOSwitchingValve">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_10">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QSpinBox" name="COSwitchingValveSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>50</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>2</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetCOSwitchingValveButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="H2ValveGroupBox">
+             <property name="title">
+              <string>H2 Bosch oven</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_13">
+              <item>
+               <widget class="QLabel" name="labelH2SwitchingValve">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;N/A&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_8">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <widget class="QSpinBox" name="H2SwitchingValveSpinBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>50</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>2</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="SetH2SwitchingValveButton">
+                   <property name="text">
+                    <string>set</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Plots">
+       <attribute name="title">
+        <string>Real-time plots</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QFrame" name="mainPlot">
+          <property name="frameShape">
+           <enum>QFrame::WinPanel</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_7">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_22">
+           <item>
+            <widget class="QPushButton" name="startPlotButton">
+             <property name="text">
+              <string>Start Log</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="stopPlotButton">
+             <property name="text">
+              <string>Stop Log</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="clearPlotButton">
+             <property name="text">
+              <string>Clear Log</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="savePlotButton">
+             <property name="text">
+              <string>Save Traces As...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Method">
+       <attribute name="title">
+        <string>Method</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QTableWidget" name="methodTable"/>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_9">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_23">
+           <item>
+            <widget class="QPushButton" name="LoadMethodButton">
+             <property name="text">
+              <string>Load Method</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="ClearMethodButton">
+             <property name="text">
+              <string>Clear Method</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="AddRowBelowButton">
+             <property name="text">
+              <string>Add Row Below</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="AddRowAboveButton">
+             <property name="text">
+              <string>Add Row Above</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="DeleteRowButton">
+             <property name="text">
+              <string>Delete Row</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="SaveMethodButton">
+             <property name="text">
+              <string>Save Method As...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1388</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuSave">
+     <property name="title">
+      <string>Save</string>
+     </property>
+     <addaction name="actionSaveMethod"/>
+     <addaction name="actionSaveTraces"/>
+     <addaction name="actionSaveDialog"/>
+    </widget>
+    <widget class="QMenu" name="menuOpen">
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <addaction name="actionOpenMethod"/>
+     <addaction name="actionOpenTraces"/>
+     <addaction name="actionOpenDialog"/>
+    </widget>
+    <addaction name="menuOpen"/>
+    <addaction name="menuSave"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <widget class="QMenu" name="menuIsoDat">
+     <property name="title">
+      <string>IsoDat</string>
+     </property>
+     <addaction name="actionTriggerFile"/>
+     <addaction name="actionMethodFolder"/>
+    </widget>
+    <addaction name="actionEditMethod"/>
+    <addaction name="menuIsoDat"/>
+    <addaction name="actionSetCCSafetyChecks"/>
+   </widget>
+   <widget class="QMenu" name="menuRun">
+    <property name="title">
+     <string>&amp;Run</string>
+    </property>
+    <widget class="QMenu" name="menuCryoCooler">
+     <property name="title">
+      <string>CryoCooler</string>
+     </property>
+     <addaction name="actionCCInitialize"/>
+     <addaction name="actionCCShutDown"/>
+    </widget>
+    <addaction name="menuCryoCooler"/>
+    <addaction name="separator"/>
+    <addaction name="actionStart"/>
+    <addaction name="actionStop"/>
+    <addaction name="actionTriggerStart"/>
+    <addaction name="actionTriggerStop"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuRun"/>
+  </widget>
+  <action name="actionEditMethod">
+   <property name="text">
+    <string>Method</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>Start Run</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Return</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="text">
+    <string>Stop Run</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Backspace</string>
+   </property>
+  </action>
+  <action name="actionSaveMethod">
+   <property name="text">
+    <string>Method</string>
+   </property>
+  </action>
+  <action name="actionSaveTraces">
+   <property name="text">
+    <string>Traces</string>
+   </property>
+  </action>
+  <action name="actionSaveDialog">
+   <property name="text">
+    <string>Dialog</string>
+   </property>
+  </action>
+  <action name="actionOpenMethod">
+   <property name="text">
+    <string>Method</string>
+   </property>
+  </action>
+  <action name="actionOpenTraces">
+   <property name="text">
+    <string>Traces</string>
+   </property>
+  </action>
+  <action name="actionOpenDialog">
+   <property name="text">
+    <string>Dialog</string>
+   </property>
+  </action>
+  <action name="actionCCInitialize">
+   <property name="text">
+    <string>Initialize</string>
+   </property>
+   <property name="toolTip">
+    <string>Initialize CryoCooler</string>
+   </property>
+  </action>
+  <action name="actionCCShutDown">
+   <property name="text">
+    <string>Shut Down</string>
+   </property>
+   <property name="toolTip">
+    <string>Shut Down CryoCooler</string>
+   </property>
+  </action>
+  <action name="actionTriggerStart">
+   <property name="text">
+    <string>Start Run on Trigger</string>
+   </property>
+  </action>
+  <action name="actionTriggerStop">
+   <property name="text">
+    <string>Stop Wait for Trigger</string>
+   </property>
+  </action>
+  <action name="actionTriggerFile">
+   <property name="text">
+    <string>Choose Trigger File</string>
+   </property>
+  </action>
+  <action name="actionMethodFolder">
+   <property name="text">
+    <string>Choose Methods Folder</string>
+   </property>
+  </action>
+  <action name="actionSetCCSafetyChecks">
+   <property name="text">
+    <string>Set Safety Checks</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

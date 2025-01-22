@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>1280</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>720</width>
+    <height>1280</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>720</width>
+    <height>1280</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="mainTabs">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>720</width>
+      <height>1230</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>720</width>
+      <height>1230</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>720</width>
+      <height>1248</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Command Line</string>
+     </attribute>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QGroupBox" name="dialogGroupBox">
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QFrame" name="frame">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>COM Port:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="portInput">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>/dev/cu.usbmodem11201</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_32">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_21">
+            <item>
+             <widget class="QPushButton" name="connectButton">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Connect</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_15">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>100</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="disconnectButton">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Disconnect</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_2">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Command:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="commandInput">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="sendButton">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Send</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_3">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Readback:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="readbackBrowser"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_4">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="clearButton">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Clear</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>128</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="saveButton">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Save As...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Interface</string>
+     </attribute>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QGroupBox" name="groupBox_5">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+            </font>
+           </property>
+           <property name="title">
+            <string>Plots</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QFrame" name="mainPlot">
+              <property name="frameShape">
+               <enum>QFrame::WinPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="midLineWidth">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_7">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QPushButton" name="startPlotButton">
+                 <property name="text">
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="stopPlotButton">
+                 <property name="text">
+                  <string>Stop</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="clearPlotButton">
+                 <property name="text">
+                  <string>Clear</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>171</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="savePlotButton">
+                 <property name="text">
+                  <string>Save Traces As...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>460</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>460</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+            </font>
+           </property>
+           <property name="title">
+            <string>Double Trap Interface</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <item>
+             <widget class="QFrame" name="frame_8">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_26">
+               <item>
+                <widget class="QPushButton" name="toggleTrapButton">
+                 <property name="text">
+                  <string>Toggle</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>272</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="font">
+                  <font>
+                   <pointsize>30</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Trapping:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="labelDTTrapping">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>30</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>N/A</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_9">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_29">
+               <item>
+                <widget class="QFrame" name="frame_23">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_16">
+                  <item>
+                   <widget class="QLabel" name="labelDTLTemp">
+                    <property name="font">
+                     <font>
+                      <pointsize>30</pointsize>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                      <strikeout>false</strikeout>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>N/A C</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="dtLeftCheckBox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>  Heat Left</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_33">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_5">
+                  <item>
+                   <widget class="QLabel" name="labelDTLTemp_2">
+                    <property name="font">
+                     <font>
+                      <pointsize>30</pointsize>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                      <strikeout>false</strikeout>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Set temp:</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QSpinBox" name="dtTempSpinBox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="frame">
+                     <bool>true</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="buttonSymbols">
+                     <enum>QAbstractSpinBox::PlusMinus</enum>
+                    </property>
+                    <property name="maximum">
+                     <number>150</number>
+                    </property>
+                    <property name="singleStep">
+                     <number>5</number>
+                    </property>
+                    <property name="value">
+                     <number>50</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_34">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_18">
+                  <item>
+                   <widget class="QLabel" name="labelDTRTemp">
+                    <property name="font">
+                     <font>
+                      <pointsize>30</pointsize>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                      <strikeout>false</strikeout>
+                     </font>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="text">
+                     <string>N/A C</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="dtRightCheckBox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::RightToLeft</enum>
+                    </property>
+                    <property name="text">
+                     <string>Heat Right  </string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_17">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>190</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>190</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_31">
+               <item>
+                <widget class="QGroupBox" name="groupBox_8">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>He Flow</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_14">
+                  <item>
+                   <widget class="QFrame" name="frame_35">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_32">
+                     <item>
+                      <widget class="QLabel" name="labelHeFlow">
+                       <property name="font">
+                        <font>
+                         <pointsize>30</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A ccm</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="HeFlowCheckBox">
+                       <property name="text">
+                        <string>  On</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_21">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_28">
+                     <item>
+                      <widget class="QDoubleSpinBox" name="HeFlowSpinBox">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="frame">
+                        <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="buttonSymbols">
+                        <enum>QAbstractSpinBox::PlusMinus</enum>
+                       </property>
+                       <property name="decimals">
+                        <number>1</number>
+                       </property>
+                       <property name="maximum">
+                        <double>100.000000000000000</double>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="setHeFlowButton">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>Set</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="groupBox_7">
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Water Trap Temp</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_12">
+                  <item>
+                   <widget class="QFrame" name="frame_15">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_25">
+                     <item>
+                      <widget class="QLabel" name="labelWT2Temp">
+                       <property name="font">
+                        <font>
+                         <pointsize>30</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A C</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_19">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_27">
+                     <item>
+                      <widget class="QSpinBox" name="wt2TempSpinBox">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="frame">
+                        <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="buttonSymbols">
+                        <enum>QAbstractSpinBox::PlusMinus</enum>
+                       </property>
+                       <property name="maximum">
+                        <number>150</number>
+                       </property>
+                       <property name="singleStep">
+                        <number>5</number>
+                       </property>
+                       <property name="value">
+                        <number>50</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="wt2HeatCheckBox">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>  Heat</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="maximumSize">
+            <size>
+             <width>15000</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+            </font>
+           </property>
+           <property name="title">
+            <string>Vacuum Line</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QLabel" name="labelVacuum">
+              <property name="font">
+               <font>
+                <pointsize>30</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>N/A mbar</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_14">
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <widget class="QGroupBox" name="groupBox_10">
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Water Trap Temp</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_30">
+                  <item>
+                   <widget class="QFrame" name="frame_36">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_33">
+                     <item>
+                      <widget class="QLabel" name="labelWT1Temp">
+                       <property name="font">
+                        <font>
+                         <pointsize>30</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A C</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_37">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_34">
+                     <item>
+                      <widget class="QSpinBox" name="wt1TempSpinBox">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="frame">
+                        <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="buttonSymbols">
+                        <enum>QAbstractSpinBox::PlusMinus</enum>
+                       </property>
+                       <property name="maximum">
+                        <number>150</number>
+                       </property>
+                       <property name="singleStep">
+                        <number>5</number>
+                       </property>
+                       <property name="value">
+                        <number>50</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="wt1HeatCheckBox">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>Heat</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="groupBox_11">
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Cold Finger Temp</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_33">
+                  <item>
+                   <widget class="QFrame" name="frame_38">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_35">
+                     <item>
+                      <widget class="QLabel" name="labelCFTemp">
+                       <property name="font">
+                        <font>
+                         <pointsize>30</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A C</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_39">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_36">
+                     <item>
+                      <widget class="QSpinBox" name="cfTempSpinBox">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="frame">
+                        <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="buttonSymbols">
+                        <enum>QAbstractSpinBox::PlusMinus</enum>
+                       </property>
+                       <property name="maximum">
+                        <number>150</number>
+                       </property>
+                       <property name="singleStep">
+                        <number>5</number>
+                       </property>
+                       <property name="value">
+                        <number>50</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cfHeatCheckBox">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>Heat</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>720</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuOpen">
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <addaction name="actionOpenDialog"/>
+     <addaction name="actionOpenTraces"/>
+    </widget>
+    <widget class="QMenu" name="menuSave">
+     <property name="title">
+      <string>Save</string>
+     </property>
+     <addaction name="actionSaveDialog"/>
+     <addaction name="actionSaveTraces"/>
+    </widget>
+    <addaction name="menuOpen"/>
+    <addaction name="menuSave"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpenDialog">
+   <property name="text">
+    <string>Dialog</string>
+   </property>
+  </action>
+  <action name="actionSaveDialog">
+   <property name="text">
+    <string>Dialog</string>
+   </property>
+  </action>
+  <action name="actionOpenTraces">
+   <property name="text">
+    <string>Traces</string>
+   </property>
+  </action>
+  <action name="actionSaveTraces">
+   <property name="text">
+    <string>Traces</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

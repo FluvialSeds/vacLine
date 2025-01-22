@@ -1,0 +1,4 @@
+([('aTrois',
+   '/Users/jhemingway/polybox/_pyprojects/atrois/03 aTrois control '
+   'JDH/dist/aTrois',
+   'EXECUTABLE')],)

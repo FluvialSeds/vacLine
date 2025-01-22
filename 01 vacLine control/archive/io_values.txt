@@ -1,0 +1,6 @@
+_methodFolder=None
+_triggerFile=None
+_minH2OFlow=750
+_maxH2OTemp=25
+_ccTempTol=30
+_maxCryoCoolerTemp=30

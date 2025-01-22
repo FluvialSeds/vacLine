@@ -1,0 +1,4 @@
+[aTrois]
+status=FAILURE
+sample=JH2
+method=foobar

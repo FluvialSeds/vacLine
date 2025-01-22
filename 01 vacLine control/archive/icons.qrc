@@ -1,0 +1,10 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file alias="run-start">resources/run-start.svg</file>
+    <file alias="run-stop">resources/run-stop.svg</file>
+    <file alias="trigger-start">resources/trigger-start.svg</file>
+    <file alias="trigger-stop">resources/trigger-stop.svg</file>
+    <file alias="cryocooler-start">resources/cryocooler-start.svg</file>
+    <file alias="cryocooler-stop">resources/cryocooler-stop.svg</file>
+</qresource>
+</RCC>

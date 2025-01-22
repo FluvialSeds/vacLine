@@ -1,0 +1,6 @@
+{
+    "CommReadOutPeriod": 0.05,
+    "TMPeriod": 0.001,
+    "logging": true,
+    "loggerPeriod": 0.01
+}

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QGroupBox" name="dialogGroupBox">
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>COM Port:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="portInput">
+            <property name="text">
+             <string>/dev/cu.usbmodem11201</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_32">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_21">
+          <item>
+           <widget class="QPushButton" name="connectButton">
+            <property name="text">
+             <string>Connect</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>100</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="disconnectButton">
+            <property name="text">
+             <string>Disconnect</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Command:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="commandInput"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="sendButton">
+            <property name="text">
+             <string>Send</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_3">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Readback:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="readbackBrowser"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_4">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="clearButton">
+            <property name="text">
+             <string>Clear</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>128</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="saveButton">
+            <property name="text">
+             <string>Save As...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuSave">
+     <property name="title">
+      <string>Save</string>
+     </property>
+     <addaction name="actionSaveDialog"/>
+    </widget>
+    <widget class="QMenu" name="menuOpen">
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <addaction name="actionOpenDialog"/>
+    </widget>
+    <addaction name="menuOpen"/>
+    <addaction name="menuSave"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actionEditMethod">
+   <property name="text">
+    <string>Method</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>Start Run</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Return</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="text">
+    <string>Stop Run</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Backspace</string>
+   </property>
+  </action>
+  <action name="actionSaveMethod">
+   <property name="text">
+    <string>Method</string>
+   </property>
+  </action>
+  <action name="actionSaveTraces">
+   <property name="text">
+    <string>Traces</string>
+   </property>
+  </action>
+  <action name="actionSaveDialog">
+   <property name="text">
+    <string>Dialog</string>
+   </property>
+  </action>
+  <action name="actionOpenMethod">
+   <property name="text">
+    <string>Method</string>
+   </property>
+  </action>
+  <action name="actionOpenTraces">
+   <property name="text">
+    <string>Traces</string>
+   </property>
+  </action>
+  <action name="actionOpenDialog">
+   <property name="text">
+    <string>Dialog</string>
+   </property>
+  </action>
+  <action name="actionCCInitialize">
+   <property name="text">
+    <string>Initialize</string>
+   </property>
+   <property name="toolTip">
+    <string>Initialize CryoCooler</string>
+   </property>
+  </action>
+  <action name="actionCCShutDown">
+   <property name="text">
+    <string>Shut Down</string>
+   </property>
+   <property name="toolTip">
+    <string>Shut Down CryoCooler</string>
+   </property>
+  </action>
+  <action name="actionTriggerStart">
+   <property name="text">
+    <string>Start Run on Trigger</string>
+   </property>
+  </action>
+  <action name="actionTriggerStop">
+   <property name="text">
+    <string>Stop Wait for Trigger</string>
+   </property>
+  </action>
+  <action name="actionTriggerFile">
+   <property name="text">
+    <string>Choose Trigger File</string>
+   </property>
+  </action>
+  <action name="actionMethodFolder">
+   <property name="text">
+    <string>Choose Methods Folder</string>
+   </property>
+  </action>
+  <action name="actionSetCCSafetyChecks">
+   <property name="text">
+    <string>Set Safety Checks</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

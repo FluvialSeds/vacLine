@@ -1,0 +1,124 @@
+{
+	"onboardLED": {
+		"Driver": "LED",
+		"Parameter": {
+			"name": "onboardLED",
+			"pin": 25
+		}
+	},
+	"valveHeIn": {
+		"Driver": "Valve",
+		"Parameter": {
+			"name": "valveHeIn",
+			"pin": 18
+		}
+	},
+	"valveSwitchingLeft": {
+		"Driver": "Valve",
+		"Parameter": {
+			"name": "valveSwitchingLeft",
+			"pin": 19
+		}
+	},
+	"valveSwitchingRight": {
+		"Driver": "Valve",
+		"Parameter": {
+			"name": "valveSwitchingRight",
+			"pin": 20
+		}
+	},
+	"mfcHeIn": {
+		"Driver": "MFC",
+		"Parameter": {
+			"name": "mfcHeIn",
+			"bus": 1,
+			"baud": 57600,
+			"pinRx": 9,
+			"pinTx": 8,
+			"maxFlow": 200,
+		}
+	},
+	"vacuumSensor": {
+		"Driver": "VacuumSensor",
+		"Parameter": {
+			"name": "vacuumSensor",
+			"adr": "0x48",
+			"gain": 1,
+		}
+	},
+	"pidColdFinger": {
+		"Driver": "PID",
+		"Parameter": {
+			"name": "pidColdFinger",
+			"id": 1,
+			"bus": 0,
+			"baud": 9600,
+			"pinRx": 1,
+			"pinTx": 0,
+			"ch": 1,
+			"type": "E"
+		}
+	},
+	"pidDT_R": {
+		"Driver": "PID",
+		"Parameter": {
+			"name": "pidDT_R",
+			"id": 1,
+			"bus": 0,
+			"baud": 9600,
+			"pinRx": 1,
+			"pinTx": 0,
+			"ch": 3,
+			"type": "E"
+		}
+	},
+	"pidDT_L": {
+		"Driver": "PID",
+		"Parameter": {
+			"name": "pidDT_L",
+			"id": 1,
+			"bus": 0,
+			"baud": 9600,
+			"pinRx": 1,
+			"pinTx": 0,
+			"ch": 4,
+			"type": "E"
+		}
+	},
+	"pidWT1": {
+		"Driver": "PID",
+		"Parameter": {
+			"name": "pidWT1",
+			"id": 2,
+			"bus": 0,
+			"baud": 9600,
+			"pinRx": 1,
+			"pinTx": 0,
+			"ch": 1,
+			"type": "E"
+		}
+	},
+	"pidWT2": {
+		"Driver": "PID",
+		"Parameter": {
+			"name": "pidWT2",
+			"id": 2,
+			"bus": 0,
+			"baud": 9600,
+			"pinRx": 1,
+			"pinTx": 0,
+			"ch": 2,
+			"type": "E"
+		}
+	},
+	"tcdGC": {
+		"Driver": "TCD",
+		"Parameter": {
+			"name": "tcdGC",
+			"adr": "0x69",
+			"bits": 18,
+			"channel": 1,
+			"gain": 1,
+		},
+	},
+}
