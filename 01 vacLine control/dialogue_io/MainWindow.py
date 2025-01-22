@@ -202,7 +202,7 @@ class WidgetMain(QMainWindow):
 		self.plt.setLabel('bottom', 'date time')
 
 		#adjust spacing
-		self.l.setSpacing(0.)
+		self.l.setSpacing(0)
 		self.l.setContentsMargins(0., 0., 0., 0.)
 
 		#add empty plots to fill later
@@ -1191,15 +1191,6 @@ class WidgetMain(QMainWindow):
 				y = self.plotters[p]['data'], 
 				x = self.plotTimeStamps
 				)
-
-
-
-
-
-
-
-
-
 
 	#==================#
 	# HELPER FUNCTIONS #
