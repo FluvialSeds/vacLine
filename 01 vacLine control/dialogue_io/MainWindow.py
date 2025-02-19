@@ -258,10 +258,10 @@ class WidgetMain(QMainWindow):
 				)
 
 			#set color
-			# self.plotters[p]['instance'].setPen(
-			# 	color = self.plotters[p]['c'],
-			# 	width = 5,
-			# 	)
+			self.plotters[p]['instance'].setPen(
+				color = self.plotters[p]['c'],
+				width = 5,
+				)
 
 		# PLOTTER LOG TIMER #
 		#-------------------#
